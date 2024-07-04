@@ -12,7 +12,7 @@ import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { FormsModule } from '@angular/forms';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import { provideHttpClient } from '@angular/common/http';
     ButtonModule,
   ],
   providers: [
-    provideHttpClient(),
+    provideHttpClient(withFetch()),
     provideClientHydration(), 
   ],
   bootstrap: [AppComponent]
